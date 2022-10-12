@@ -1,7 +1,7 @@
 const Todo = require("../Models/TodoModels");
 
 exports.create = async (data) => {
-  const newData = await Todo.create(data);
+  const newData = await Todo.create({ items: data.item });
   return newData;
 };
 exports.findAll = async () => {
